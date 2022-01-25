@@ -1,0 +1,13 @@
+function testWhile :
+read X
+%
+Y := nil;
+I := nil;
+while Y =? nil do
+    I := (cons nil I);
+    if I =? X then
+        Y := X
+    fi
+od
+%
+write I

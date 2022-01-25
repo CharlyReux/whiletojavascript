@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CompJS</title>
+    <link rel="stylesheet" type="text/css" href="CSS/CompJS.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+<script type="module" src="JS/jav.js"></script>
+<script src="JS/libwh.js"></script>
+
+
+<header>
+    <h1 class="mainTitle">
+        Compilateur WHILE vers JavaScript
+    </h1>
+</header>
+<div class="loader" style="visibility: hidden;"></div>
+
+<body>
+    <div class="main">
+        <div class="WHILE">
+
+            <label for="whilePrgrm">Votre programme WHILE</label>
+            <textarea id="whilePrgrm" rows="20" ></textarea>
+
+            <label for="parameter"id="parameter"style="display: none;">Vos paramètres</label>
+            <textarea id="whileParam0" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam1" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam2" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam3" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam4" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam5" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam6" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam7" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam8" rows="1" style="display: none;"></textarea>
+            <textarea id="whileParam9" rows="1" style="display: none;"></textarea>
+
+        </div>
+        <div class="buttons">
+            <button class="Transl">Traduire</button>
+            <button class="Exec"  style="display:block;" >Éxecuter</button>
+        
+        </div>
+        <div class="JS">
+
+            <label for="JSPgrm">Programme JavaScript généré</label>
+            <textarea id="JSPgrm" rows="20" ></textarea>
+            <label for="JSResult" id="JSLab" style="display: none;">Résultat d'éxecution</label>
+            <textarea id="JSResult" rows="1" style="display: none;"></textarea>
+
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
+
+<!--
+     TODO:
+    - Enlever les parenthèses dans la génération pour les appels de filsgauche... (tout les get quoi)
+    - Changer le constructeur de arbrebin ou la génération pour que les arbres soit vraiments créés
+    - gerer l'affectation multiple de WHILE pour les appel de fonction
+-->

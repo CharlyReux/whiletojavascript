@@ -1,0 +1,6 @@
+function testVar :
+read X
+%
+X := (hd X)
+%
+write X

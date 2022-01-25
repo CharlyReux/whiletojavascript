@@ -1,0 +1,9 @@
+function testIf :
+read X
+%
+Res := false;
+if X =? nil then
+    Res := true
+fi
+%
+write Res

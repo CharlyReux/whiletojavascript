@@ -1,0 +1,9 @@
+function testForStress :
+read X
+%
+Y := nil;
+for X do
+    X:= (cons nil X)
+od
+%
+write Y

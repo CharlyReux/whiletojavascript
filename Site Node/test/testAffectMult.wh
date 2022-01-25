@@ -1,0 +1,6 @@
+function testAffMult :
+read X, Y
+%
+X,Y := nil, (cons nil nil)
+%
+write X, Y

@@ -1,0 +1,42 @@
+grammar paramInterpreter.inter.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.inter.paramInterpreter/MyDsl"
+
+Model:
+	eqListe+=Equal*;
+
+Equal:
+	(vars=Vars ':=' exp=Exprs);
+
+Vars:
+	lvars=VARIABLE;
+
+Exprs:
+	lexpr=Expression;
+
+Expression:
+	expbg=ExprBase ('=?' expbd=ExprBase)?;
+
+ExprBase:
+	{ExprBase} ni='nil' | v=VARIABLE | sy=SYMBOL | ebt=EBtl | ebh=EBhd | ebc=EBcons | ebl=EBlist | ebs=EBsy;
+
+EBsy:
+	'(' sy=SYMBOL lexpb+=ExprBase* ')';
+
+EBhd:
+	'(' 'hd' expb=ExprBase ')';
+
+EBtl:
+	'(' 'tl' expb=ExprBase ')';
+
+EBcons:
+	{EBcons} '(' 'cons' lexpb+=ExprBase* ')';
+
+EBlist:
+	{EBlist} '(' 'list' lexpb+=ExprBase* ')';
+
+terminal SYMBOL:
+	('a'..'z') (('a'..'z') | ('A'..'Z') | ('0'..'9'))* ('!' | '?')?;
+
+terminal VARIABLE:
+	('A'..'Z') (('a'..'z') | ('A'..'Z') | ('0'..'9'))* ('!' | '?')?;

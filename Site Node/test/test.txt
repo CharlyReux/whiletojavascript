@@ -1,0 +1,23 @@
+function test:
+read A
+%
+nop
+% 
+write A 
+
+function main:
+read A,B
+%
+B:=(test (cons C D E F)); 
+U:=(help E) 
+
+
+% 
+write U
+
+function test:
+read A,B
+%
+nop
+% 
+write A

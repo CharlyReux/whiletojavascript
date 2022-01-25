@@ -1,0 +1,11 @@
+function testIfElse :
+read X
+%
+Res := nil;
+if X =? nil then
+    Res := true
+else
+    Res := false
+fi
+%
+write Res
