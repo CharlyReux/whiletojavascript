@@ -30,3 +30,21 @@ Les fichiers que nous avons utilisés/rajoutés sont les suivant.
 - Op.java                  : Fichier contenant les différents opérateurs utilisés dans les codes 3@.
 - MyDslGenerator.xtend     : Fichier contenant le parcours et l'interprétation du code WHILE en code 3@, ainsi que la génération de la table des symboles.
 - TAdress.xtend            : Classe des codes 3@, contenant aussi la fonction de traduction d'un code 3@ en javascript.
+
+## Interpréteur de paramètres
+Projet éclipse xtext pour la lecture et l'interprétation des paramètres.
+
+##Site Node:
+Tous les fichiers necessaire au lancement du site internet.
+### Utilisation:
+- Lancer le server : >node server.js
+- Acceder au site sur http://localhost:8000
+### Organisation:
+- /public: contient tous les fichiers accessibles par le client, dont les fichier javascript libwh.js et client.js.
+- /ReceivedFile: contient le dernier fichier .wh recu par le client.
+- /Scripts: contient tous les .jar du compilateur et de l'interpréteur ainsi que le scripts python whc et le dernier script python généré
+- /test: contient des exemple de programmes while utilisés pour faire des tests.
+- CompJS.html: fichier html du site.
+- server.js: fichier javascript du server.
+### Notes:
+- Le programme rentré sur le site internet doit avoir une fonction nommée "main" pour pouvoir être exécuté par la suite.
