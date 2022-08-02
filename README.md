@@ -1,4 +1,16 @@
 # WhileToJavascript
+In one of our courses, called "Compilation", we had a project of making a compiler and an
+interpreter. Our teacher gave us
+a personnalized programming language as an input and we had to choose the output language. We chose
+to translate to
+javascript. The project was in a group of 6 and I was the programming lead.<br><br>
+In terms of technical aspects we used Xtext to make the compiler and the parameter interpreter,
+for the rest of it it consisted of python scripts and some NodeJS.
+The final goal was to make a web version of the compiler, so that's why we used Node.<br><br>
+The project had to be done using the AGILE methodology, so it was divided into 3 "sprints". First,
+we made a pretty-printer,
+then we programmed the translation of a part of the input language and for the last part we had to
+make the entire translation.<br><br>
 
 ## CommandLine Exec
 Contient les fichiers necessaire à l'execution de notre programme à partir d'une invite de commande.
